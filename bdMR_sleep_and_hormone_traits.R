@@ -162,7 +162,7 @@ write.csv(chr_tot_het_F_outliers, "sensitivity_chrono_totaltest_F_supplementary_
 # Read in exposure instrument & outcome data 
 ####
 
-exposure_dat <- read_exposure_data("totaltest_female_inv_fin.txt", sep = "\t",
+exposure_dat <- read_exposure_data("total_testosterone_female.txt", sep = "\t",
                                    snp_col = "SNP", beta_col = "BETA",
                                    se_col = "SE", effect_allele_col = "ALLELE1",
                                    other_allele_col = "ALLELE0", eaf_col = "A1FREQ", pval_col = "P_BOLT_LMM")
@@ -187,8 +187,8 @@ or_tottest_chr_F <- generate_odds_ratios(res_test)
 # # SENSITIVITY TESTS (RAW) # #
 
 tot_chr_het_raw <- mr_heterogeneity(dat)
-tot_chr _het_raw$I2 <- ((tot_chr_het_raw$Q-tot_chr_het_raw$Q_df)/tot_chr_het_raw$Q)*100
-tot_chr _het_raw$outcome= "Chronotype" # Update for different datasets
+tot_chr_het_raw$I2 <- ((tot_chr_het_raw$Q-tot_chr_het_raw$Q_df)/tot_chr_het_raw$Q)*100
+tot_chr_het_raw$outcome= "Chronotype" # Update for different datasets
 
 tot_chr_pleio_raw <- mr_pleiotropy_test(dat)
 
@@ -446,7 +446,7 @@ write.csv(chr_bio_het_M_outliers, "sensitivity_chrono_biotest_M_supplementary_ou
 # Read in exposure instrument & outcome data 
 ####
 
-exposure_dat <- read_exposure_data("biotest_female.txt", sep = "\t",
+exposure_dat <- read_exposure_data("bioavailable_testosterone_female.txt", sep = "\t",
                                    snp_col = "SNP", beta_col = "BETA",
                                    se_col = "SE", effect_allele_col = "ALLELE1",
                                    other_allele_col = "ALLELE0", eaf_col = "A1FREQ", pval_col = "P_BOLT_LMM")
@@ -471,8 +471,8 @@ or_biotest_chr_M <- generate_odds_ratios(res_test)
 # SENSITIVITY TESTS (RAW) #
 
 bio_chr_het_raw <- mr_heterogeneity(dat)
-bio_chr _het_raw$I2 <- ((bio_chr_het_raw$Q-bio_chr_het_raw$Q_df)/bio_chr_het_raw$Q)*100
-bio_chr _het_raw$outcome= "Chronotype" # Update for different datasets
+bio_chr_het_raw$I2 <- ((bio_chr_het_raw$Q-bio_chr_het_raw$Q_df)/bio_chr_het_raw$Q)*100
+bio_chr_het_raw$outcome= "Chronotype" # Update for different datasets
 
 bio_chr_pleio_raw <- mr_pleiotropy_test(dat)
 
