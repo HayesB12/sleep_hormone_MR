@@ -30,3 +30,9 @@ Both exposure and outcome data in bdMR are from UK Biobank, as such, Steiger fil
 
 > mvMR_breast_and_prostate_cancer.R
 
+This script can be edited and used to run:
+Chronotype + Total Testosterone > Breast Cancer
+Chronotype + Bioavailable Testosterone > Breast Cancer
+
+Chronotype + Bioavailable Testosterone > Prostate Cancer
+
